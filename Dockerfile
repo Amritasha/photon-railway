@@ -13,7 +13,9 @@ RUN tdnf update -y && \
         openssl-devel zlib-devel libffi-devel \
         readline-devel ncurses-devel \
         libxml2-devel libxslt-devel \
-        sqlite-devel linux-api-headers && \
+        sqlite-devel linux-api-headers \
+        postgresql-devel mariadb-devel \
+        libyaml-devel libpng-devel libjpeg-turbo-devel && \
     tdnf clean all
 
 RUN wget -qO /usr/local/bin/ttyd https://github.com/tsl0922/ttyd/releases/download/1.7.3/ttyd.x86_64 && \
