@@ -3,13 +3,13 @@
 
 # Deploy and Host Photon OS Terminal on Railway
 
-Photon OS Terminal is a browser-accessible VMware Photon OS 5.0 shell deployed on Railway via [ttyd](https://github.com/tsl0922/ttyd). Ultra-minimal container-optimized Linux from VMware/Broadcom — password-protected access, persistent storage at `/root`, and essential dev tools and C libraries pre-installed.
+Photon OS Terminal is a browser-accessible VMware Photon OS 5.0 shell deployed on Railway via [ttyd](https://github.com/tsl0922/ttyd). Ultra-minimal container-optimized Linux from VMware/Broadcom — password-protected, persistent storage at `/root`, essential dev tools, and common C/system libraries pre-installed so most language runtimes and native extensions compile out of the box.
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.com/new/template)
 
 ## About Hosting Photon OS Terminal
 
-Hosting Photon OS Terminal on Railway means spinning up a Photon OS 5.0 container with a browser-based terminal exposed via ttyd. Photon OS is VMware's open-source container-optimized Linux distribution — RPM-based with a minimal footprint, using `tdnf` (tiny dnf) as its package manager. Railway handles the build, networking, and SSL automatically. The image ships with commonly used C libraries — openssl-devel, zlib-devel, libffi-devel, readline-devel, ncurses-devel, libxml2-devel, libxslt-devel, sqlite-devel, and linux-api-headers — so most language runtimes and native extensions compile without extra setup. A persistent volume is mounted at `/root` so your files survive restarts.
+Hosting Photon OS Terminal on Railway means running a Photon OS 5.0 container with a browser-based terminal exposed via ttyd. Photon OS is VMware's open-source container-optimized Linux — RPM-based with a minimal footprint, using `tdnf` (tiny dnf) as its package manager. Railway handles the build, networking, and SSL automatically. The image ships with commonly used C libraries — openssl-devel, zlib-devel, libffi-devel, readline-devel, ncurses-devel, libxml2-devel, libxslt-devel, sqlite-devel, postgresql-devel, mariadb-devel, libyaml-devel, libpng-devel, libjpeg-turbo-devel, and linux-api-headers — so most language runtimes and native extensions compile without extra setup. A persistent volume is mounted at `/root` so your files survive restarts.
 
 ## Common Use Cases
 
@@ -49,7 +49,7 @@ Hosting Photon OS Terminal on Railway means spinning up a Photon OS 5.0 containe
 | Network | ifconfig, ip, ping, openssh |
 | Data | jq |
 | General | sudo, python3, pip, git, curl, wget |
-| Libraries | openssl-devel, zlib-devel, libffi-devel, readline-devel, ncurses-devel, libxml2-devel, libxslt-devel, sqlite-devel, linux-api-headers |
+| Libraries | openssl-devel, zlib-devel, libffi-devel, readline-devel, ncurses-devel, libxml2-devel, libxslt-devel, sqlite-devel, postgresql-devel, mariadb-devel, libyaml-devel, libpng-devel, libjpeg-turbo-devel, linux-api-headers |
 
 ## Installing More Packages
 
