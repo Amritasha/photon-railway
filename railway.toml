@@ -1,0 +1,11 @@
+[deploy]
+startCommand = "/bin/bash -c \"/usr/local/bin/ttyd -p 7681 -c $USERNAME:$PASSWORD /bin/bash\""
+numReplicas = 1
+
+[deploy.resources]
+memoryMb = 256
+vcpus = 1
+
+[[volumes]]
+mountPath = "/root"
+name = "photon-data"
