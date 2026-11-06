@@ -1,5 +1,5 @@
 [deploy]
-startCommand = "/bin/bash -c 'exec /usr/local/bin/ttyd -p 7681 -c \"$USERNAME:$PASSWORD\" /bin/bash'"
+startCommand = "/bin/bash -c '/usr/local/bin/install-claude-code.sh; exec /usr/local/bin/ttyd -p 7681 -c \"$USERNAME:$PASSWORD\" /bin/bash'"
 numReplicas = 1
 
 # No [deploy.resources] ceiling: a fixed cap here throttled real shell use.
